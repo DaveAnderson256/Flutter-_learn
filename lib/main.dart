@@ -1,6 +1,10 @@
 import "package:flutter/material.dart";
-import "package:flutter_application_1/widgets/home.dart";
+import "package:flutter_application_1/widgets/button.dart";
+import "package:flutter_application_1/widgets/dismissible.dart";
+import "package:flutter_application_1/widgets/drawer.dart";
+import "package:flutter_application_1/widgets/grid_list.dart";
 import "package:flutter_application_1/widgets/rows_cols.dart";
+import "package:flutter_application_1/widgets/snack_bar.dart";
 
 // ignore_for_file: prefer_const_constructors
 void main() => runApp(const MyApp());
@@ -14,9 +18,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        primaryColor: Color.fromARGB(255, 204, 48, 10),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color.fromARGB(255, 10, 62, 204),
+          brightness: Brightness.dark,
+        ),
       ),
-      home: RowsCols(),
+      home: DrawerWidget(),
     );
   }
 }
