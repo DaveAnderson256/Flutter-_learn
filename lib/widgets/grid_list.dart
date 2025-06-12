@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class GridList extends StatelessWidget {
   GridList({super.key});
   List<String> Fruits = [
