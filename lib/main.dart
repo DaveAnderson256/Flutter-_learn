@@ -4,7 +4,9 @@ import "package:flutter/material.dart";
 import "package:flutter_application_1/widgets/animated_text.dart";
 import "package:flutter_application_1/widgets/bottom_nav.dart";
 import "package:flutter_application_1/widgets/drop_down.dart";
+import "package:flutter_application_1/widgets/forms.dart";
 import "package:flutter_application_1/widgets/grid_list.dart";
+import "package:flutter_application_1/widgets/image_picker.dart";
 import "package:flutter_application_1/widgets/images.dart";
 import "package:flutter_application_1/widgets/alert.dart";
 import "package:flutter_application_1/widgets/bottomsheet.dart";
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
           secondary: Color.fromARGB(255, 30, 224, 27),
         ),
       ),
-      home: DropDownWidget(),
+      home: FormsWidget(),
     );
   }
 }
