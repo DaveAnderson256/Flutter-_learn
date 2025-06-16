@@ -12,6 +12,7 @@ class SnackBa extends StatelessWidget {
         title: Center(child: Text("SnackBar")),
         backgroundColor: const Color.fromARGB(255, 184, 176, 111),
       ),
+      // ignore: avoid_unnecessary_containers
       body: Container(
         child: Center(
           child: ElevatedButton(

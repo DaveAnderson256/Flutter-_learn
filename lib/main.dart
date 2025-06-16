@@ -3,6 +3,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_application_1/widgets/animated_text.dart";
 import "package:flutter_application_1/widgets/bottom_nav.dart";
+import "package:flutter_application_1/widgets/drawer.dart";
 import "package:flutter_application_1/widgets/drop_down.dart";
 import "package:flutter_application_1/widgets/forms.dart";
 import "package:flutter_application_1/widgets/grid_list.dart";
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           secondary: Color.fromARGB(255, 30, 224, 27),
         ),
       ),
-      home: FormsWidget(),
+      home: DrawerWidget(),
     );
   }
 }

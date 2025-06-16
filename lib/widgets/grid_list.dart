@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -30,6 +30,7 @@ class GridList extends StatelessWidget {
           backgroundColor: Colors.purple,
         ),
         body: Container(
+          //-------------------------Grid View -------------------------------
           child: GridView.builder(
             //use the aspect ration
             itemCount: Fruits.length,
