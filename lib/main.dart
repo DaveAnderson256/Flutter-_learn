@@ -2,6 +2,7 @@
 
 import "package:flutter/material.dart";
 import "package:flutter_application_1/cloned_ui.dart";
+import "package:flutter_application_1/instagram_clone.dart";
 import "package:flutter_application_1/widgets/animated_text.dart";
 import "package:flutter_application_1/widgets/bottom_nav.dart";
 import "package:flutter_application_1/widgets/drawer.dart";
@@ -26,11 +27,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.light,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Color.fromARGB(255, 239, 70, 70),
+          seedColor: Color.fromARGB(255, 92, 200, 253),
           secondary: Color.fromARGB(255, 30, 224, 27),
         ),
       ),
-      home: ClonedUi(),
+      home: ProfilePageWidget(),
     );
   }
 }
