@@ -15,6 +15,16 @@ class ProfilePageWidget extends StatefulWidget {
 }
 
 class _ProfilePageWidgetState extends State<ProfilePageWidget> {
+  int selected_index = 0;
+
+  PageController pageController = PageController();
+  void onTapped(int index) {
+    setState(() {
+      selected_index = index;
+      pageController.jumpToPage(selected_index);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     List<String> img_list = [
@@ -247,6 +257,42 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
         ),
       ),
       //bottomNavigationBar: NavigationBar(),
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          const BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          const BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Container(
+                width: 30,
+                height: 30,
+                decoration: BoxDecoration(
+                    color: Colors.red,
+                    shape: BoxShape.circle), // Provide a valid width value
+                child: Icon(
+                  Icons.add,
+                  color: Colors.white,
+                ),
+              ),
+              label: 'Add'),
+          const BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+            icon: Container(
+              height: 30,
+              width: 30,
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    'https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg='),
+              ),
+            ),
+            label: 'Profile',
+          ),
+        ],
+        currentIndex: selected_index,
+        selectedItemColor: Theme.of(context).colorScheme.primary,
+        unselectedIconTheme:
+            IconThemeData(color: Color.fromARGB(255, 20, 188, 218)),
+        onTap: onTapped,
+      ),
     );
   }
 
