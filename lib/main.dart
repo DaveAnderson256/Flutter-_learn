@@ -1,8 +1,8 @@
 // ignore_for_file: unused_import
 
 import "package:flutter/material.dart";
-import "package:flutter_application_1/cloned_ui.dart";
-import "package:flutter_application_1/instagram_clone.dart";
+import "package:flutter_application_1/widgets/cloned_ui.dart";
+import "package:flutter_application_1/widgets/instagram_clone.dart";
 import "package:flutter_application_1/widgets/animated_text.dart";
 import "package:flutter_application_1/widgets/bottom_nav.dart";
 import "package:flutter_application_1/widgets/drawer.dart";

@@ -18,9 +18,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
   @override
   Widget build(BuildContext context) {
     List<String> img_list = [
-      "https://www.shutterstock.com/image-photo/very-random-pose-asian-men-260nw-2423213775.jpg",
-      "https://www.shutterstock.com/image-photo/portrait-indonesian-man-long-hair-260nw-2511582609.jpg",
-      "https://www.shutterstock.com/image-photo/these-some-random-photos-260nw-2402066699.jpg",
+      'https://www.shutterstock.com/image-photo/very-random-pose-asian-men-260nw-2423213775.jpg',
+      'https://www.shutterstock.com/image-photo/portrait-indonesian-man-long-hair-260nw-2511582609.jpg',
+      'https://www.shutterstock.com/image-photo/these-some-random-photos-260nw-2402066699.jpg',
       'https://64.media.tumblr.com/db77f82e75871b41c74fada988433425/tumblr_mk4lnhRAJY1rlmi5yo1_1280.jpg',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJa4_mV1FWFgxgQUzBNHrD7ROTf7hoJdzvg&s',
       'https://thumbs.dreamstime.com/b/obesicat-garden-random-image-fat-pussy-cat-dressed-as-soccer-player-dutch-national-team-exercising-spring-87947898.jpg',
@@ -185,7 +185,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (context, index) {
                               print(
-                                  'Image: ${profiles[index]['image']} Name: ${profiles[index]['name']}');
+                                  'Image: ${profiles[index]['img']} Name: ${profiles[index]['name']}');
                               return Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -195,8 +195,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     height: 60,
                                     decoration: BoxDecoration(
                                         image: DecorationImage(
+                                            fit: BoxFit.cover,
                                             image: NetworkImage(
-                                                profiles[index]['image']!)),
+                                                profiles[index]['img']!)),
                                         border: Border.all(
                                           //width: 65,
                                           color: Colors.blue,
@@ -205,7 +206,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         color: Colors.red),
                                   ),
                                   Text(
-                                    'name',
+                                    profiles[index]['name']!,
                                     style:
                                         TextStyle(fontWeight: FontWeight.w600),
                                   )
