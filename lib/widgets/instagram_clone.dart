@@ -2,10 +2,7 @@
 
 //import 'dart:html';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 class ProfilePageWidget extends StatefulWidget {
   const ProfilePageWidget({super.key});
@@ -27,7 +24,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> img_list = [
+    List<String> imgList = [
       'https://www.shutterstock.com/image-photo/very-random-pose-asian-men-260nw-2423213775.jpg',
       'https://www.shutterstock.com/image-photo/portrait-indonesian-man-long-hair-260nw-2511582609.jpg',
       'https://www.shutterstock.com/image-photo/these-some-random-photos-260nw-2402066699.jpg',
@@ -39,7 +36,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtqpzv4bbSGNxumH0hMiS6ESKL-kguRYGyyjgAOmQW9ut7orT4spUoeuh9LgXgG77JRwI&usqp=CAU',
       'https://millbryhill.co.uk/cdn/shop/products/1580723808-00421400_dd785d0e-f4ab-4ace-9a90-27cd55aa8912_1800x1800.jpg?v=1612352475',
     ];
-    List<String> name_list = [
+    List<String> nameList = [
       "Alex",
       "Brian",
       "Cathy",
@@ -54,10 +51,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
 
     // Combine names and images into a list of maps
     List<Map<String, String>> profiles = List.generate(
-      img_list.length,
+      imgList.length,
       (index) => {
-        'name': name_list[index],
-        'img': img_list[index],
+        'name': nameList[index],
+        'img': imgList[index],
       },
     );
 
@@ -239,7 +236,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
             //=================for the images=================//
             Expanded(
               child: GridView.builder(
-                  itemCount: img_list.length,
+                  itemCount: imgList.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 4),
                   itemBuilder: ((context, index) {
@@ -249,7 +246,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage(img_list[index]))),
+                              image: NetworkImage(imgList[index]))),
                     );
                   })),
             ),
